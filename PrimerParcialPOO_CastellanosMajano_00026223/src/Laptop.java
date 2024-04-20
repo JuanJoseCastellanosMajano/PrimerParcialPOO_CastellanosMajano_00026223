@@ -27,15 +27,21 @@ public class Laptop extends Articulo implements DefinirPrecio{
 
     @Override
     public String  obtainDescription() {
-        this.description=getDescription()
+        this.description=getDescription();
         return description;
     }
 
-    public Laptop(String marca, float RAM, String name, String model) {
+    @Override
+    public void show() {
+        System.out.println();
+    }
+
+    public Laptop(String marca,float RaM, String name, String model, String description, float price) {
         this.marca = marca;
         this.RAM = RAM;
         this.name=getName();
         this.model = getModel();
-
+        this.description=getDescription();
+        this.price=getPrice();
     }
 }

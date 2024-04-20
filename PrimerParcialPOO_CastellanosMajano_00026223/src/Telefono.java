@@ -36,7 +36,7 @@ public class Telefono extends Articulo implements DefinirPrecio{
         return description;
     }
 
-    public Telefono(String marca, float memory) {
+    public Telefono(String marca,float memory, String name, String model, String description, float price) {
         this.marca = marca;
         this.memory = memory;
         this.name=getName();

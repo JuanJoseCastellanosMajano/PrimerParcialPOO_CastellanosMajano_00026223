@@ -2,12 +2,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 public class Main{
+
     public static void main(String[]args) {
         int op=0;
         int fila;
-        int marca;
-        float datos;
-        Scanner sc = new Scanner();
+        String marca, name, modelo,description;
+        float memory, price;
+        Scanner sc = new Scanner(System.in);
         List lista= new ArrayList<>();
         do {
             System.out.println("Ingrese lo que desea hacer: ");
@@ -19,12 +20,37 @@ public class Main{
             op= sc.nextInt();
             switch (op){
                 case 1:
-                    Telefono telefono=new Telefono();
+                    System.out.println("Ingrese la marca ");
+                    marca=sc.nextLine();
+                    System.out.println("Ingrese la memoria ");
+                    memory=sc.nextFloat();
+                    System.out.println("Ingrese el nombre ");
+                    name=sc.nextLine();
+                    System.out.println("Ingrese el modelo ");
+                    modelo=sc.nextLine();
+                    System.out.println("Ingrese descripción ");
+                    description=sc.nextLine();
+                    System.out.println("Ingrese el precio neto");
+                    price=sc.nextFloat();
+
+                    Telefono telefono=new Telefono(marca,memory,name,modelo,description,price);
                      telefono.create();
                      lista.add(telefono);
 
                 case 2:
-                    Laptop laptop=new Laptop();
+                    System.out.println("Ingrese la marca ");
+                    marca=sc.nextLine();
+                    System.out.println("Ingrese la memoria RAM ");
+                    memory=sc.nextFloat();
+                    System.out.println("Ingrese el nombre ");
+                    name=sc.nextLine();
+                    System.out.println("Ingrese el modelo ");
+                    modelo=sc.nextLine();
+                    System.out.println("Ingrese descripción ");
+                    description=sc.nextLine();
+                    System.out.println("Ingrese el precio neto");
+                    price=sc.nextFloat();
+                    Laptop laptop=new Laptop(marca,memory,name,modelo,description,price);
                     laptop.create();
                     lista.add(laptop);
 
@@ -46,6 +72,7 @@ public class Main{
 
 
         }while (op!=5);
+
 
     }
 }
