@@ -17,6 +17,7 @@ public class Main{
             System.out.println("3=Modificar electrónicos existente");
             System.out.println("4=Ver listado de electrónicos");
             System.out.println("5= Salir");
+            System.out.println();
             op= sc.nextInt();
             switch (op){
                 case 1:
@@ -58,9 +59,15 @@ public class Main{
                 case 3:
                     System.out.println("Ingrese la fila que desea modificar");
                     fila= sc.nextInt();
+                    if(fila== lista.size()){
+
+                    }
 
                 case 4:
-                    System.out.println(lista);
+                    for(int i =0;i< lista.size();i++){
+                        System.out.println(lista);
+                    }
+
 
                 case 5:
                     break;
