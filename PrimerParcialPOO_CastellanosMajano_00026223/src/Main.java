@@ -66,6 +66,7 @@ public class Main{
                 case 4:
                     for(int i =0;i< lista.size();i++){
                         System.out.println(lista);
+
                     }
 
 
