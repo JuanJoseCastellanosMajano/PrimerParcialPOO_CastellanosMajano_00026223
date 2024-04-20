@@ -25,6 +25,16 @@ public class Telefono extends Articulo implements DefinirPrecio{
     }
 
     @Override
+    public void show() {
+        super.show();
+    }
+
+    @Override
+    public void modify() {
+        super.modify();
+    }
+
+    @Override
     public float obtainPrice() {
         this.price=getPrice();
         return price;
